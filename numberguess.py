@@ -1,3 +1,4 @@
+# start the code
 import random
 
 def guess_number():
@@ -18,4 +19,4 @@ def guess_number():
         else:
             print(f"Congratulations! You guessed the number in {attempts} attempts.")
             break
-
+# end the code
