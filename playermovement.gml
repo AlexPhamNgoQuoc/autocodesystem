@@ -10,15 +10,15 @@ if modes == 'keyboard'
     hsp = move * movespeed;
     if (vsp < 10) vsp += grav;
     
-    if (place_meeting(x,y+1,o_grassblock))
+    if (place_meeting(x,y+1,[solid]))
     {
         vsp = key_jump * -jumpspeed
     }
     
     // hor Col
-    if (place_meeting(x+hsp,y,o_grassblock))
+    if (place_meeting(x+hsp,y,[solid]))
     {
-        while(!place_meeting(x+sign(hsp),y,o_grassblock))
+        while(!place_meeting(x+sign(hsp),y,[solid]))
         {
             x += sign(hsp);
         }
@@ -27,9 +27,9 @@ if modes == 'keyboard'
     x += hsp;
     
     // vert Col
-    if (place_meeting(x,y+vsp,o_grassblock))
+    if (place_meeting(x,y+vsp,[solid]))
     {
-        while(!place_meeting(x,y+sign(vsp),o_grassblock))
+        while(!place_meeting(x,y+sign(vsp),[solid]))
         {
             y += sign(vsp);
         }
@@ -49,15 +49,15 @@ if modes == 'arrow'
     hsp = move * movespeed;
     if (vsp < 10) vsp += grav;
     
-    if (place_meeting(x,y+1,o_grassblock))
+    if (place_meeting(x,y+1,[solid]))
     {
         vsp = key_jump * -jumpspeed
     }
     
     // hor Col
-    if (place_meeting(x+hsp,y,o_grassblock))
+    if (place_meeting(x+hsp,y,[solid]))
     {
-        while(!place_meeting(x+sign(hsp),y,o_grassblock))
+        while(!place_meeting(x+sign(hsp),y,[solid]))
         {
             x += sign(hsp);
         }
@@ -66,9 +66,9 @@ if modes == 'arrow'
     x += hsp;
     
     // vert Col
-    if (place_meeting(x,y+vsp,o_grassblock))
+    if (place_meeting(x,y+vsp,[solid]))
     {
-        while(!place_meeting(x,y+sign(vsp),o_grassblock))
+        while(!place_meeting(x,y+sign(vsp),[solid]))
         {
             y += sign(vsp);
         }
