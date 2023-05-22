@@ -1,3 +1,4 @@
+# start the code
 import random
 import string
 
@@ -10,3 +11,4 @@ def generate_password(length):
 password_length = 10
 generated_password = generate_password(password_length)
 print(generated_password)
+# end the code
