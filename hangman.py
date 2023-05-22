@@ -1,3 +1,4 @@
+# start the code
 import random
 
 def hangman():
@@ -40,3 +41,4 @@ def hangman():
         print(f"The word was: {word}")
 
 hangman()
+# end the code
